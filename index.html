@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Projeto PWA</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <!-- Link para o arquivo de estilos -->
+  <link rel="stylesheet" href="/projeto-pwa/style.css">
+  <!-- Link para o arquivo manifest (ajustado para o subdiretório correto) -->
+  <link rel="manifest" href="/projeto-pwa/manifest.json">
 </head>
+
 <body>
   <header>
-    <h1>Portifólio PWA</h1>
+    <h1>Portfólio PWA</h1>
   </header>
-  
+
   <main>
     <section>
       <h2>Contato</h2>
@@ -26,7 +30,17 @@
     <p>&copy; 2025 Meu Projeto PWA</p>
   </footer>
 
-  <script src="app.js">
+  <script src="/projeto-pwa/app.js"></script> <!-- Caminho ajustado para o subdiretório -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Registra o service worker com o caminho correto para o subdiretório
+      navigator.serviceWorker.register('/projeto-pwa/service-worker.js').then((registration) => {
+        console.log('Service Worker registrado com sucesso:', registration);
+      }).catch((error) => {
+        console.log('Erro ao registrar o Service Worker:', error);
+      });
+    }    
   </script>
 </body>
+
 </html>
