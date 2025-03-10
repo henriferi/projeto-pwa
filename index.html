@@ -4,36 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Projeto PWA</title>
-  <!-- Link para o arquivo de estilos -->
-  <link rel="stylesheet" href="/projeto-pwa/style.css">
-  <!-- Link para o arquivo manifest (ajustado para o subdiretório correto) -->
+  <title>Meu Projeto PWA - Portfólio</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="/projeto-pwa/manifest.json">
 </head>
 
 <body>
   <header>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
     <h1>Portfólio PWA</h1>
   </header>
 
   <main>
-    <section>
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é Henrique e sou um desenvolvedor web em processo de aprendizado. Atualmente, estou focado em estudar JavaScript e suas diversas tecnologias, como frameworks e bibliotecas que podem ser utilizadas para criar aplicações dinâmicas e interativas.</p>
+      <p>Tenho uma paixão por resolver problemas e construir soluções que possam impactar positivamente a vida das pessoas. Meu objetivo é me tornar um desenvolvedor full-stack, com habilidades tanto em front-end quanto em back-end, criando aplicações robustas e escaláveis.</p>
+      <p>Em meu tempo livre, gosto de explorar novas tecnologias, participar de comunidades de desenvolvedores e contribuir com projetos de código aberto. Sou um grande entusiasta do aprendizado contínuo e acredito que sempre há algo novo a aprender no mundo da tecnologia.</p>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos">
+      <h2>Meus Projetos</h2>
+      <div class="projeto">
+        <h3>Projeto 1: Aplicativo de Tarefas</h3>
+        <p>Este projeto é um gerenciador de tarefas simples, onde os usuários podem adicionar, editar e excluir tarefas. Foi desenvolvido utilizando HTML, CSS e JavaScript. Ele permite que os usuários se organizem e acompanhem suas atividades de forma eficiente.</p>
+        <a href="https://github.com/seu-repositorio/projeto1" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="projeto">
+        <h3>Projeto 2: Website Responsivo</h3>
+        <p>Este projeto consiste em um site responsivo que se adapta a diferentes tamanhos de tela, usando HTML5, CSS3 e JavaScript. O site foi projetado para oferecer uma boa experiência de navegação tanto em dispositivos móveis quanto em desktops.</p>
+        <a href="https://github.com/seu-repositorio/projeto2" target="_blank">Ver no GitHub</a>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades">
+      <h2>Minhas Habilidades</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>React.js e Vue.js</li>
+        <li>Node.js e Express</li>
+        <li>Git e GitHub</li>
+        <li>APIs RESTful</li>
+        <li>Banco de dados SQL e NoSQL</li>
+      </ul>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
       <h2>Contato</h2>
+      <p>Gostaria de conversar sobre novos projetos, oportunidades de trabalho ou colaboração? Entre em contato comigo!</p>
       <a href="mailto:exemplo@email.com">Envie um e-mail</a><br>
       <a href="tel:+5511999999999">Ligue para nós</a><br>
       <a href="sms:+5511999999999">Envie uma SMS</a><br>
-      <iframe src="https://www.google.com/maps" width="600" height="450" frameborder="0"></iframe>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Meu Projeto PWA</p>
+    <p>&copy; 2025 Meu Projeto PWA | Todos os direitos reservados</p>
   </footer>
 
-  <script src="/projeto-pwa/app.js"></script> <!-- Caminho ajustado para o subdiretório -->
+  <script src="/projeto-pwa/app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      // Registra o service worker com o caminho correto para o subdiretório
       navigator.serviceWorker.register('/projeto-pwa/service-worker.js').then((registration) => {
         console.log('Service Worker registrado com sucesso:', registration);
       }).catch((error) => {
